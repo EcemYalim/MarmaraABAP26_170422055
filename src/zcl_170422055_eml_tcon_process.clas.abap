@@ -1,29 +1,13 @@
-CLASS zcl_170422055_eml_tcon_process DEFINITION
-  PUBLIC
-  FINAL
-  CREATE PUBLIC .
+class ZCL_170422055_EML_TCON_PROCESS definition
+  public
+  create private .
 
-  PUBLIC SECTION.
-
-    INTERFACES if_oo_adt_classrun .
-  PROTECTED SECTION.
-  PRIVATE SECTION.
+public section.
+protected section.
+private section.
 ENDCLASS.
 
 
 
-CLASS zcl_170422055_eml_tcon_process IMPLEMENTATION.
-
-
-  METHOD if_oo_adt_classrun~main.
-
-*    lcl_connection_eml=>insert_data(  ).
-*    lcl_connection_eml=>read_data(  ) .
-   lcl_connection_eml=>update_data(  ).
-*   lcl_connection_eml=>delete_data(  ).
-
-
-    out->write( 'CRUD operations completed' ) .
-
-  ENDMETHOD.
+CLASS ZCL_170422055_EML_TCON_PROCESS IMPLEMENTATION.
 ENDCLASS.

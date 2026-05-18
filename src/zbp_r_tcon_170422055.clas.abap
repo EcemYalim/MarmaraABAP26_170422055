@@ -1,8 +1,6 @@
 class ZBP_R_TCON_170422055 definition
   public
-  abstract
-  final
-  for behavior of ZR_TCON_170422055 .
+  create private .
 
 public section.
 protected section.

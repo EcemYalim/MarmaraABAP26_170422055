@@ -1,31 +1,13 @@
-CLASS zcl_170422055_eml_agency_upd DEFINITION
-  PUBLIC
-  FINAL
-  CREATE PUBLIC .
+class ZCL_170422055_EML_AGENCY_UPD definition
+  public
+  create private .
 
-  PUBLIC SECTION.
-
-    INTERFACES if_oo_adt_classrun .
-  PROTECTED SECTION.
-  PRIVATE SECTION.
+public section.
+protected section.
+private section.
 ENDCLASS.
 
 
 
-CLASS zcl_170422055_eml_agency_upd IMPLEMENTATION.
-
-
-  METHOD if_oo_adt_classrun~main.
-    DATA agencies_upd TYPE TABLE FOR UPDATE /dmo/i_agencytp.
-    agencies_upd = VALUE #( ( agencyid = '070035'
-                                name = 'Hello New Name') ).
-    MODIFY ENTITIES OF /dmo/i_agencytp
-        ENTITY /dmo/agency
-        UPDATE FIELDS ( name )
-            WITH agencies_upd.
-
-        COMMIT ENTITIES.
-
-        out->write( 'Method execution finished!' ).
-  ENDMETHOD.
+CLASS ZCL_170422055_EML_AGENCY_UPD IMPLEMENTATION.
 ENDCLASS.
